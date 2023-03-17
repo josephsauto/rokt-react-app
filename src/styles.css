@@ -1,0 +1,106 @@
+:root {
+  --header-height: 56px;
+  --layout-pading: 1rem;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.SearchInputIcon {
+  right: 0;
+  width: 55px;
+  border: 1px solid #f7f7f7;
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-container {
+  display: flex;
+}
+
+.left-arrow-container {
+  float: left;
+}
+.right-arrow-container {
+  float: right;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+  width: 6vh;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-svg {
+  position: sticky;
+  top: calc(var(--layout-pading) + var(--header-height) + 6vh);
+  cursor: pointer;
+  color: #7f7f7f;
+}
+
+.arrow-svg:hover {
+  color: black;
+}
+
+.search-box {
+  justify-content: center;
+  display: flex;
+  padding: var(--layout-pading);
+  background: white;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 15%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  height: var(--header-height);
+}
+
+.inner-gallery-container {
+  padding: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: calc(var(--header-height) + var(--layout-pading) + 16px);
+}
+
+/* Hide scrollbar for Chrome */
+.inner-gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.inner-gallery-container::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  background: rgb(245 245 245);
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+}
